@@ -3,18 +3,18 @@
 "nombre": "Luna",
 "edad": "2 años",
 "descripcion": "Cariñosa y tranquila",
-"foto": "assets/Images/Gatos/luna.png"
+"foto": "assets/Images/Gatos/Luna.png"
 },
 {
 "nombre": "Simba",
 "edad": "1 año",
 "descripcion": "Muy juguetón",
-"foto": "assets/Images/Gatos/simba.png"
+"foto": "assets/Images/Gatos/Simba.png"
 },
 {
 "nombre": "Nala",
 "edad": "3 años",
 "descripcion": "Sociable con otros gatos",
-"foto": "assets/Images/Gatos/nala.png"
+"foto": "assets/Images/Gatos/Nala.png"
 }
 ]
