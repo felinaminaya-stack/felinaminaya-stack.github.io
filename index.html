@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Felina Minaya — sitio de adopción de gatos. Encuentra y adopta tu próximo compañero felino.">
+<title>Felina Minaya</title>
+<link rel="stylesheet" href="css/main.css">
+<!-- Font Awesome (icon-font) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" href="assets/Images/Logo/ico.png">
+<meta property="og:title" content="Felina Minaya">
+<meta property="og:description" content="Felina Minaya — sitio de adopción de gatos. Encuentra tu nuevo amigo.">
+<meta property="og:image" content="assets/Images/Logo/Logo.png">
+</head>
+
+<body>
+
+<header class="site-header" role="banner">
+	<div class="container">
+		<a href="index.html" class="brand" aria-label="Ir a inicio">
+			<img src="assets/Images/Logo/Logo full.png" height="188" alt="Felina Minaya" loading="lazy">
+		</a>
+		<button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú">
+			<span class="hamburger"></span>
+		</button>
+		<nav id="main-navigation" class="main-nav" role="navigation" aria-label="Menú principal">
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="gatos.html">Gatos en adopción</a></li>
+				<li><a href="adopcion.html">Adoptar</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<section class="hero" aria-labelledby="hero-title">
+		<div class="hero-media">
+			<img src="assets/Images/Hero/Amanecer en Minaya con gatos.png" alt="Paisaje con gatos" loading="lazy">
+		</div>
+		<div class="container hero-content">
+			<h2 id="hero-title">Adopta, no compres</h2>
+			<p class="lead">Cada gato merece un hogar — descubre a los gatos que esperan una familia.</p>
+			<p><a class="boton" href="gatos.html">Ver gatos disponibles</a></p>
+		</div>
+	</section>
+
+	<section class="about container" aria-labelledby="about-title">
+		<h3 id="about-title">¿Quiénes somos?</h3>
+		<p>Felina Minaya es una asociación sin ánimo de lucro formada por voluntarios locales, profesionales veterinarios y familias de acogida que comparten un objetivo común: ofrecer una segunda oportunidad a los gatos que lo necesitan. Desde nuestra fundación hemos trabajado para rescatar animales en situación de riesgo, proporcionarles atención sanitaria integral (vacunación, desparasitación y esterilización) y prepararles emocionalmente para una vida en hogar mediante socialización y rehabilitación.</p>
+
+		<p>Nuestro enfoque combina el trabajo con centros colaboradores y una red de familias de acogida para reducir el estrés de los animales y acelerar su proceso de recuperación. Además gestionamos procesos de adopción responsables que incluyen entrevistas, visitas domiciliarias y seguimiento post-adopción para asegurar el bienestar del gato y la compatibilidad con la nueva familia.</p>
+
+		<p>Creemos en la transparencia y en la participación comunitaria: organizamos campañas de concienciación, jornadas de adopción, talleres de cuidado animal y recogida de donaciones para cubrir necesidades médicas y de manutención. Si quieres ayudar, puedes colaborar como voluntario, ser familia de acogida, donar material o apoyar económicamente. Cada aporte suma y nos permite salvar más vidas.</p>
+	</section>
+
+	<section class="featured container" aria-labelledby="featured-title">
+		<h3 id="featured-title">Gatos destacados</h3>
+		<div id="gatos" class="grid" aria-live="polite">
+			<!-- Los gatos se renderizan aquí mediante js/gatos.js -->
+		</div>
+		<p class="more"><a href="gatos.html">Ver todos los gatos</a></p>
+	</section>
+
+	<section class="cta container" aria-labelledby="cta-title">
+		<h3 id="cta-title">¿Listo para adoptar?</h3>
+		<p>Adoptar es un compromiso responsable: buscamos familias que ofrezcan cariño, estabilidad y un entorno seguro. A continuación te explicamos el proceso y cómo preparar tu hogar:</p>
+		<ul>
+			<li><strong>Revisión inicial:</strong> rellena el formulario de solicitud para que conozcamos tus preferencias y experiencia con mascotas.</li>
+			<li><strong>Entrevista:</strong> un voluntario contactará contigo para ampliar información y resolver dudas.</li>
+			<li><strong>Visita domiciliaria:</strong> verificamos que el hogar cumple requisitos básicos de seguridad y bienestar.</li>
+			<li><strong>Acuerdo de adopción:</strong> firmamos un compromiso de cuidado y seguimiento post-adopción.</li>
+			<li><strong>Seguimiento:</strong> realizamos llamadas o visitas posteriores para asegurar la adaptación del gato y ofrecer apoyo.</li>
+		</ul>
+		<p>Preparación previa: asegúrate de tener una zona tranquila para el nuevo gato, comedero y bebedero, litter box, rascador y juguetes básicos. Si necesitas asesoramiento, te ayudamos a planificar la llegada.</p>
+		<p><a class="boton-outline" href="adopcion.html">Ir al formulario de adopción</a></p>
+	</section>
+
+</main>
+
+<footer class="site-footer">
+	<div class="container">
+		<nav aria-label="Enlaces sociales">
+			<ul class="social">
+				<li>
+					<a href="https://www.instagram.com/felinaminaya/" aria-label="Instagram" target="_blank" rel="noopener">
+						<i class="fa-brands fa-instagram" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.tiktok.com/@felinaminaya" aria-label="TikTok" target="_blank" rel="noopener">
+						<i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+						<i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+        <p>&copy; 2026 Felina Minaya — Todos los derechos reservados. - Developed by <a href="https://publicaudiovisual.com/" target="_blank" rel="noopener">PublicAudiovisual XR</a></p>
+	</div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+<script src="js/gatos.js" defer></script>
+</body>
+</html>

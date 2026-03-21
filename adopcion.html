@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Formulario de adopción - Felina Minaya">
+<title>Adoptar - Felina Minaya</title>
+</head>
+<link rel="stylesheet" href="css/main.css">
+<link rel="icon" href="assets/Images/Logo/ico.png">
+<!-- Font Awesome (icon-font) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+	<div class="container">
+		<a href="index.html" class="brand" aria-label="Ir a inicio">
+			<img src="assets/Images/Logo/Logo full.png" height="140" alt="Felina Minaya" loading="lazy">
+		</a>
+		<button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú">
+			<span class="hamburger"></span>
+		</button>
+		<nav id="main-navigation" class="main-nav" role="navigation" aria-label="Menú principal">
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="gatos.html">Gatos en adopción</a></li>
+				<li><a href="adopcion.html">Adoptar</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<div class="container">
+		<h1>Enviar solicitud de adopción</h1>
+		<p class="lead">Gracias por considerar la adopción responsable. Antes de enviar la solicitud, revisa la información sobre el proceso y los requisitos abajo. Esto nos ayuda a encontrar el mejor hogar para cada gato.</p>
+		<section class="adopt-info">
+			<h2>Proceso y requisitos</h2>
+			<ul>
+				<li>Completa el formulario con información veraz sobre tu hogar y experiencia con mascotas.</li>
+				<li>Tras revisar la solicitud, coordinaremos una entrevista telefónica o por videollamada.</li>
+				<li>En algunos casos realizamos una visita domiciliaria para confirmar condiciones básicas de seguridad.</li>
+				<li>Solicitamos compromiso de cuidado y seguimiento post-adopción para asegurar la adaptación del animal.</li>
+			</ul>
+			<h3>Qué preparar</h3>
+			<p>Prepara un espacio tranquilo para la llegada, litter box, comederos, un rascador y tiempo para la adaptación. Si convives con otras mascotas, indícanoslo en el formulario.</p>
+			<p>Si aún no has elegido un gato, consulta <a href="gatos.html">el listado de gatos disponibles</a> y anota el nombre del que te interesa.</p>
+		</section>
+		<form class="adoption-form" action="https://formspree.io/f/xxxx" method="POST">
+			<div class="form-grid">
+				<div class="field">
+					<label for="nombre">Nombre completo *</label>
+					<input id="nombre" name="nombre" type="text" required>
+				</div>
+				<div class="field">
+					<label for="email">Email *</label>
+					<input id="email" name="email" type="email" required>
+				</div>
+				<div class="field">
+					<label for="telefono">Teléfono</label>
+					<input id="telefono" name="telefono" type="tel" placeholder="Opcional">
+				</div>
+				<div class="field">
+					<label for="vivienda">Tipo de vivienda</label>
+					<select id="vivienda" name="vivienda">
+						<option value="casa">Casa</option>
+						<option value="piso">Piso</option>
+						<option value="otra">Otra</option>
+					</select>
+				</div>
+			</div>
+
+			<label for="mensaje">¿Por qué quieres adoptar? Cuéntanos un poco sobre tu hogar y experiencia</label>
+			<textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí"></textarea>
+
+			<div class="form-actions">
+				<button class="boton" type="submit">Enviar solicitud</button>
+			</div>
+		</form>
+		<p class="help-note">¿Necesitas ayuda? Visita nuestra página de <a href="contacto.html">Contacto</a> o escríbenos por redes sociales. Respondemos en menos de 72 horas.</p>
+	</div>
+</main>
+
+<footer class="site-footer">
+	<div class="container">
+		<nav aria-label="Enlaces sociales">
+			<ul class="social">
+				<li><a href="https://www.instagram.com/felinaminaya/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.tiktok.com/@felinaminaya" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
+				<li><a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+		<p>&copy; 2026 Felina Minaya — Todos los derechos reservados. - Developed by <a href="https://publicaudiovisual.com/" target="_blank" rel="noopener">PublicAudiovisual XR</a></p>
+	</div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+
+</body>
+</html>

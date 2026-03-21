@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Panel administrativo - Felina Minaya (no público)">
+<title>Admin - Felina Minaya</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="icon" href="assets/Images/Logo/ico.png">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+	<div class="container">
+		<a href="index.html" class="brand" aria-label="Ir a inicio">
+			<img src="assets/Images/Logo/Logo full.png" height="140" alt="Felina Minaya" loading="lazy">
+		</a>
+		<button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú">
+			<span class="hamburger"></span>
+		</button>
+		<nav id="main-navigation" class="main-nav" role="navigation" aria-label="Menú principal">
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="gatos.html">Gatos en adopción</a></li>
+				<li><a href="adopcion.html">Adoptar</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<div class="container">
+		<h1>Panel administrativo</h1>
+		<p class="lead">Añade nuevos perfiles de gatos para el listado público. Este formulario es para uso interno; revisa las rutas de las imágenes antes de enviar.</p>
+
+		<form class="adoption-form" id="form-gato">
+			<div class="form-grid">
+				<div class="field">
+					<label for="nombre">Nombre</label>
+					<input type="text" id="nombre" name="nombre" placeholder="Nombre del gato" required>
+				</div>
+				<div class="field">
+					<label for="edad">Edad</label>
+					<input type="text" id="edad" name="edad" placeholder="Ej: 2 años">
+				</div>
+				<div class="field">
+					<label for="foto">Ruta imagen</label>
+					<input type="text" id="foto" name="foto" placeholder="assets/Images/Gatos/ejemplo.png">
+				</div>
+				<div class="field">
+					<label for="estado">Estado</label>
+					<select id="estado" name="estado">
+						<option value="disponible">Disponible</option>
+						<option value="reservado">Reservado</option>
+						<option value="adoptado">Adoptado</option>
+					</select>
+				</div>
+			</div>
+            <br>
+			<label for="descripcion">Descripción</label><br>
+			<textarea id="descripcion" name="descripcion" rows="5" placeholder="Añade una descripción breve"></textarea>
+
+			<div class="form-actions">
+				<button class="boton" type="submit">Añadir gato</button>
+			</div>
+		</form>
+	</div>
+</main>
+
+<footer class="site-footer">
+	<div class="container">
+		<nav aria-label="Enlaces sociales">
+			<ul class="social">
+				<li><a href="https://www.instagram.com/felinaminaya/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.tiktok.com/@felinaminaya" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
+				<li><a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+		<p>&copy; 2026 Felina Minaya — Todos los derechos reservados. - Developed by <a href="https://publicaudiovisual.com/" target="_blank" rel="noopener">PublicAudiovisual XR</a></p>
+	</div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+<script src="js/admin.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Contacto - Felina Minaya">
+<title>Contacto - Felina Minaya</title>
+</head>
+<link rel="stylesheet" href="css/main.css">
+<link rel="icon" href="assets/Images/Logo/ico.png">
+<!-- Font Awesome (icon-font) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="Ir a inicio">
+      <img src="assets/Images/Logo/Logo full.png" height="140" alt="Felina Minaya" loading="lazy">
+    </a>
+    <button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú">
+      <span class="hamburger"></span>
+    </button>
+    <nav id="main-navigation" class="main-nav" role="navigation" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="gatos.html">Gatos en adopción</a></li>
+        <li><a href="adopcion.html">Adoptar</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Contacto</h1>
+    <p class="lead">¿Tienes preguntas sobre adopciones, voluntariado o donaciones? Escríbenos y te responderemos lo antes posible. Detalla en el mensaje el motivo del contacto para que podamos darte una respuesta rápida y útil.</p>
+    <form class="adoption-form" action="https://formspree.io/f/xxxx" method="POST">
+      <div class="form-grid">
+        <div class="field">
+          <label for="nombre">Nombre completo *</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" type="tel" placeholder="Opcional">
+        </div>
+        <div class="field">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="general">General</option>
+            <option value="adopcion">Adopción</option>
+            <option value="voluntariado">Voluntariado</option>
+            <option value="donaciones">Donaciones</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <label for="mensaje">Mensaje</label><br>
+      <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+      <div class="form-actions">
+        <button class="boton" type="submit">Enviar mensaje</button>
+      </div>
+
+      <p class="help-note">Si prefieres, también puedes contactarnos por Instagram o TikTok. Respondemos en menos de 72 horas laborables.</p>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-label="Enlaces sociales">
+      <ul class="social">
+        <li><a href="https://www.instagram.com/felinaminaya/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.tiktok.com/@felinaminaya" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Felina Minaya — Todos los derechos reservados. - Developed by <a href="https://publicaudiovisual.com/" target="_blank" rel="noopener">PublicAudiovisual XR</a></p>
+  </div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+
+</body>
+</html>

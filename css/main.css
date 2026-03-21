@@ -1,0 +1,418 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	background: #fafafa;
+	color: #222;
+}
+
+.visually-hidden{ position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
+
+/* Centered page container */
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+header{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.site-header .brand{
+	display: inline-block;
+	border-radius: 50%;
+	background: #eef3f7;
+	padding: 18px;
+	/* Neumorphism shadow */
+	box-shadow: 12px 12px 24px rgba(16,24,40,0.09), -10px -10px 22px rgba(255,255,255,0.86);
+}
+
+.site-header .brand img{
+	display: block;
+	border-radius: 50%;
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+}
+
+/* Header layout: brand and nav side-by-side */
+.site-header .container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.main-nav ul{
+	display: flex;
+	gap: 28px;
+}
+
+.main-nav a{
+  padding: 8px 10px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* Nav toggle (hamburger) */
+.nav-toggle{
+	display: none;
+	background: transparent;
+	border: none;
+}
+.nav-toggle .hamburger{
+	display: block;
+	width: 26px;
+	height: 2px;
+}
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after{
+    background: #333;
+    content: '';
+    display: block;
+    height: 2px;
+}
+.nav-toggle .hamburger::before{ transform: translateY(-8px); }
+.nav-toggle .hamburger::after{ transform: translateY(6px); }
+
+/* keep logo size consistent unless explicitly changed */
+@media (max-width: 480px) {
+  .site-header .brand{ padding: 8px; }
+}
+
+/* Responsive behavior: hide nav on small screens and show toggle */
+@media (max-width: 768px) {
+  .main-nav{ display: none; }
+  .nav-toggle{ display: inline-block; }
+  .main-nav.open{ display: block; position: absolute; top: 100%; left: 0; right:0; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.08); padding: 12px; }
+  .main-nav.open ul{ flex-direction: column; gap: 8px; }
+  .site-header .container{ position: relative; }
+}
+
+.main-nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 16px;
+}
+
+.main-nav a{ text-decoration: none; color: inherit; }
+
+nav a{
+margin-right:20px;
+text-decoration:none;
+}
+
+.hero{
+	margin-top: 40px;
+	text-align: center;
+	padding: 40px 0;
+	position: relative;
+}
+
+/* Hero media (image) */
+/* make the hero itself a positioning context for overlays */
+.site-header{
+	padding: 8px 0; /* reduce header vertical padding to bring hero closer */
+	position: absolute; /* overlay header on top of hero image */
+	top: 0;
+	left: 0;
+	right: 0;
+	background: transparent;
+	z-index: 30;
+}
+
+.site-header .container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	width: 100%;
+	max-width: 1000px; /* match page container width */
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Ensure main content sits below the absolutely positioned header/logo */
+main{
+    margin-top: 220px; /* space to clear the logo (180px) + padding */
+}
+
+@media (max-width: 899px){
+    main{ margin-top: 260px; } /* increase on small screens where header may be larger */
+}
+
+.site-header .brand img{
+	/* preserve original logo dimensions */
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+}
+
+.main-nav{ margin-left: auto; }
+
+/* Ensure desktop nav shows inline and items align to right */
+@media (min-width: 900px){
+	.main-nav{ display: block; }
+	.main-nav ul{ justify-content: flex-end; }
+	.nav-toggle{ display: none !important; }
+}
+
+.main-nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.main-nav a{ color: #000; text-decoration: none; }
+.main-nav a:hover{ text-decoration: underline; }
+
+/* Desktop: hide hamburger, show inline menu */
+@media (min-width: 900px){
+	.nav-toggle{ display: none; }
+	.main-nav{ display: block; }
+}
+
+/* Mobile: menu toggles as dropdown over the hero */
+@media (max-width: 899px){
+	.nav-toggle{ display: block; }
+	.main-nav{
+		position: absolute;
+		top: 100%;
+		right: 12px;
+		left: auto;
+		background: rgba(0,0,0,0.65);
+		padding: 10px 12px;
+		border-radius: 8px;
+		display: none;
+		text-align: right;
+		z-index: 60; /* ensure menu appears above hero image */
+	}
+	.main-nav.open{ display: block; }
+	.main-nav ul{ flex-direction: column; gap: 12px; }
+	.main-nav a{ color: #000; font-size:16px; display:block; }
+	.main-nav a:hover{ text-decoration: underline; }
+}
+
+.hero{
+	position: relative;
+	padding-top: 0; /* image should start at very top */
+}
+
+.hero-media{
+	/* full-bleed image: stretch to viewport width while keeping centered */
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	width: 100vw;
+	overflow: hidden;
+	height: auto;
+}
+.hero-media img{
+	width: 100%;
+	height: auto;
+	display:block;
+	border-radius: 0; /* remove rounding for full-bleed */
+	box-shadow: none;
+}
+
+.hero-content{
+	margin-top: 18px;
+}
+
+@media (min-width: 900px){
+	.hero{
+		padding: 40px 0; /* slightly reduced on desktop */
+	}
+	.hero-content{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(255,255,255,0.85);
+		display: block;
+		padding: 28px 36px;
+		border-radius: 12px;
+		backdrop-filter: blur(6px);
+		z-index: 2;
+		max-width: 70%;
+		box-shadow: 0 8px 30px rgba(16,24,40,0.12);
+	}
+	.hero-content h2{ color: #111; font-size: clamp(28px, 3.5vw, 48px); margin: 0 0 8px 0; }
+	.hero-content .lead{ font-size: clamp(16px, 1.6vw, 20px); margin: 0 0 12px 0; }
+}
+
+/* On smaller screens, keep the hero content below the image and readable */
+@media (max-width: 899px){
+	/* give the hero a visible height so the overlay sits on top */
+	.hero-media{ height: 44vh; }
+
+	/* push the hero down on small screens so header overlay doesn't cover content */
+	.hero{ padding-top: 210px; }
+	.hero-media img{ height:100%; object-fit: cover; }
+
+	.hero-content{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
+		background: rgba(0,0,0,0.45);
+		color: #fff;
+		padding: 18px 20px;
+		max-width: 92%;
+		border-radius: 10px;
+		z-index: 3;
+		box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+	}
+	.hero-content h2{ font-size: clamp(20px, 6vw, 28px); margin: 0 0 6px 0; }
+	.hero-content .lead{ font-size: 14px; margin:0 0 8px 0; }
+}
+
+.boton{
+	background:#333;
+	color:white;
+	padding:10px 20px;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+.boton-outline{
+	display:inline-block;
+	padding:8px 18px;
+	border:2px solid #333;
+	color:#333;
+	border-radius:4px;
+	text-decoration:none;
+}
+
+/* CTA block styling to make it stand out */
+.cta{
+	background: linear-gradient(180deg, rgba(240, 248, 253, 0.9), rgba(248,248,248,0.9));
+	border: 1px solid rgba(16,24,40,0.04);
+	padding: 28px 22px;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+	text-align: center;
+	margin: 28px auto;
+}
+.cta h3{ margin-top: 0; font-size: clamp(20px, 2.4vw, 26px); }
+.cta p{ margin: 10px 0; color: #333; }
+.cta ul{ text-align: left; display: inline-block; margin: 8px 0 12px 0; padding-left: 18px; }
+
+/* CTA-specific button styles (primary accent) */
+.cta .boton{
+	background: #4f80e8;
+	color: #fff;
+	padding: 12px 22px;
+	border-radius: 8px;
+}
+.cta .boton-outline{
+	border-color: #4f80e8;
+	color: #4f80e8;
+}
+.cta .boton-outline:hover{ background: #4f80e8; color: #fff; }
+
+@media (max-width: 599px){
+	.cta{ padding: 20px 16px; }
+	.cta ul{ padding-left: 16px; }
+}
+
+/* Adoption form styles */
+.adoption-form{ background: #fff; padding:18px; border-radius:12px; border:1px solid #eef1f6; box-shadow: 0 8px 30px rgba(16,24,40,0.04); margin-top:18px; }
+.adoption-form .form-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; }
+.adoption-form .field{ display:flex; flex-direction:column; }
+.adoption-form label{ font-weight:600; margin-bottom:6px; color:#243044; }
+.adoption-form input, .adoption-form textarea, .adoption-form select{ padding:10px 12px; border-radius:8px; border:1px solid #d9e0ea; background:#fff; font-size:15px; }
+.adoption-form textarea{ resize:vertical; }
+.adoption-form textarea{ width:100%; max-width:480px; }
+.adoption-form .form-actions{ margin-top:12px; text-align:right; }
+.adoption-form .boton{ background:#4f80e8; padding:10px 18px; border-radius:8px; color:#fff; border:none; cursor:pointer; }
+.adoption-form .boton:hover{ filter:brightness(0.97); transform:translateY(-2px); }
+.adoption-form .help-note{ margin-top:10px; color:#666; font-size:14px; }
+
+@media (max-width: 799px){
+  .adoption-form .form-grid{ grid-template-columns: 1fr; }
+  .adoption-form .form-actions{ text-align:left; }
+}
+
+.grid{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap:18px;
+	align-items: start;
+}
+
+.card{
+    border:1px solid #e6e9ef;
+    padding:12px;
+    width:100%;
+    max-width:320px;
+    display:block;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.card img{
+	width:100%;
+	height:auto; /* show whole image */
+	max-height:320px; /* avoid extremely tall images */
+	object-fit:contain; /* preserve full image without cropping */
+	display:block;
+	background: #f6f7fb; /* subtle backdrop when aspect ratios differ */
+	padding:6px;
+	box-sizing: border-box;
+	border-radius:8px;
+}
+
+.card h3{ margin:10px 0 6px 0; font-size:18px; }
+.card p{ margin:6px 0; color:#445; }
+.card p.meta{ color:#6b6f76; font-size:14px; }
+.card p.desc{ color:#333; font-size:15px; }
+.card:hover{ transform: translateY(-6px) scale(1.02); box-shadow: 0 14px 40px rgba(16,24,40,0.12); }
+
+/* Tools (search / filters) */
+.tools{ display:flex; gap:12px; align-items:center; margin:12px 0 18px; }
+.search-input{ flex:1; padding:10px 12px; border-radius:8px; border:1px solid #d6dbe4; background:#fff; }
+.filter-select{ padding:10px 12px; border-radius:8px; border:1px solid #d6dbe4; background:#fff; }
+.no-results{ text-align:center; color:#666; margin-top:18px; }
+
+/* ensure grid cards center within container on narrow layouts */
+.grid-cards{ justify-items: center; }
+
+/* Social icons (footer) */
+.social{
+		list-style: none;
+		margin: 12px 0 18px 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		gap: 12px;
+		align-items: center;
+}
+.social li{ display: inline-block; }
+.social a{ display:inline-flex; align-items:center; justify-content:center; background: transparent; color: #333; text-decoration:none; padding:6px; font-size:20px; }
+.ocial a svg{ display:none; }
+.social a .fa, .social a i{ font-size:22px; }
+.social a:hover{ color: #e85a4f; transform: translateY(-2px); }
+
+@media (prefers-reduced-motion: no-preference){
+	.social a{ transition: transform 160ms ease, filter 140ms ease; }
+}
+
+/* Alternate: brand-colored variant if you prefer official colors */
+.social a.brand-instagram{ /* optional, not applied by default */ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff; padding:6px 8px; border-radius:6px; }
+.social a.brand-tiktok{ background: linear-gradient(135deg,#010101 0%,#010101 100%); color:#fff; padding:6px 8px; border-radius:6px; }
+.social a.brand-facebook{ background:#1877f2; color:#fff; padding:6px 8px; border-radius:6px; }
