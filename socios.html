@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hazte socio — Felina Minaya</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/Images/Logo/ico.png">
+</head>
+<body>
+  <a class="skip-link visually-hidden" href="#main-content">Saltar al contenido</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Ir a inicio">
+        <img src="assets/Images/Logo/Logo full.png" height="188" alt="Felina Minaya" loading="lazy">
+      </a>
+      <button type="button" class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-navigation" class="main-nav" role="navigation" aria-label="Menú principal">
+              <button type="button" class="nav-close" aria-label="Cerrar menú">×</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Quiénes somos</button>
+            <ul class="submenu">
+              <li><a href="mision.html">Misión</a></li>
+              <li><a href="metodo-cer.html">Método CER (explicado claramente)</a></li>
+              <li><a href="team.html">Equipo</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Colonias</button>
+            <ul class="submenu">
+              <li><a href="coloniasfelinas.html">Qué son</a></li>
+              <li><a href="colonias-visitas.html">Cómo se gestionan</a></li>
+              <li><a href="colonias-gestiones.html">Normas de convivencia</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Colabora</button>
+            <ul class="submenu">
+              <li><a href="economiacircular.html">Economía circular</a></li>
+              <li><a href="socios.html">Hazte socio (formulario)</a></li>
+              <li><a href="voluntariado.html">Voluntariado</a></li>
+              <li><a href="donaciones.html">Donaciones</a></li>
+              <li><a href="merchandising.html">Tienda Solidaria</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Transparencia</button>
+            <ul class="submenu">
+              <li><a href="estatutos.html">Estatutos</a></li>
+              <li><a href="acta-fundacional.html">Acta fundacional</a></li>
+              <li><a href="memorias.html">Memorias / actividad</a></li>
+              <li><a href="uso-fondos.html">Uso de fondos</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Recursos</button>
+            <ul class="submenu">
+              <li><a href="guias.html">Guías básicas (alimentación responsable, convivencia)</a></li>
+              <li><a href="documentos.html">Documentos descargables</a></li>
+            </ul>
+          </li>
+
+          <li><a href="blog.html">Blog</a></li>
+          
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="assets/Images/Hero/Amanecer%20en%20Minaya%20con%20gatos.png" alt="Gatos en un amanecer" loading="lazy">
+      </div>
+      <div class="container hero-content">
+        <h2 id="hero-title">Hazte socio</h2>
+        <p class="lead">Apoya nuestro trabajo y ayuda a financiar esterilizaciones, tratamientos y acogidas.</p>
+        <p><a class="boton" href="#form-socio">Inscribirme</a></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="beneficios-title">
+      <h3 id="beneficios-title">Beneficios de ser socio</h3>
+      <ul>
+        <li>Acceso a informes periódicos sobre el destino de las donaciones.</li>
+        <li>Descuentos en la Tienda Solidaria y en eventos organizados por la asociación.</li>
+        <li>Participación en talleres y actividades exclusivas para socios.</li>
+        <li>Reconocimiento en nuestras memorias anuales (si lo deseas).</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="planes-title">
+      <h3 id="planes-title">Planes y cuotas</h3>
+      <div class="grid">
+        <div class="card">
+          <h3>Socio mensual</h3>
+          <p class="desc">Cuota sugerida: 5 €/mes — Aporta de forma continuada y sostenida.</p>
+        </div>
+        <div class="card">
+          <h3>Socio anual</h3>
+          <p class="desc">Cuota sugerida: 50 €/año — Pago único con las mismas ventajas.</p>
+        </div>
+        <div class="card">
+          <h3>Patrocinador</h3>
+          <p class="desc">Contribución libre — ideal para empresas o particulares que quieran apoyar campañas concretas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-title">
+      <h3 id="form-title">Formulario de inscripción</h3>
+      <form id="form-socio" class="adoption-form" action="#" method="post" onsubmit="handleSocioSubmit(event)">
+        <div class="form-grid">
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" required>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input id="telefono" name="telefono">
+          </div>
+          <div class="field">
+            <label for="plan">Plan</label>
+            <select id="plan" name="plan" required>
+              <option value="mensual">Socio mensual — 5 €/mes</option>
+              <option value="anual">Socio anual — 50 €/año</option>
+              <option value="patrocinador">Patrocinador — contribución libre</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="boton">Enviar inscripción</button>
+        </div>
+        <p class="help-note">Tras enviar el formulario recibirás un correo con las instrucciones de pago. Si prefieres, contacta con nosotros en <a href="mailto:info@felinaminaya.org">info@felinaminaya.org</a>.</p>
+      </form>
+    </section>
+
+    <script>
+      function handleSocioSubmit(e){
+        e.preventDefault();
+        // Simular envío — en un sitio real aquí se enviaría al servidor
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+        setTimeout(()=>{
+          btn.textContent = 'Enviado';
+          alert('Gracias por convertirte en socio. Te hemos enviado un correo con los pasos siguientes.');
+          e.target.reset();
+          btn.disabled = false;
+          btn.textContent = 'Enviar inscripción';
+        },800);
+      }
+    </script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav aria-label="Enlaces sociales">
+        <ul class="social">
+          <li>
+            <a href="https://www.instagram.com/felinaminaya/" aria-label="Instagram" target="_blank" rel="noopener">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@felinaminaya" aria-label="TikTok" target="_blank" rel="noopener">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Felina Minaya — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

@@ -15,30 +15,80 @@
 </head>
 
 <body>
+	<a class="skip-link visually-hidden" href="#main-content">Saltar al contenido</a>
 
 <header class="site-header" role="banner">
 	<div class="container">
 		<a href="index.html" class="brand" aria-label="Ir a inicio">
 			<img src="assets/Images/Logo/Logo full.png" height="188" alt="Felina Minaya" loading="lazy">
 		</a>
-		<button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú">
+		<button type="button" class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú">
 			<span class="hamburger"></span>
 		</button>
 		<nav id="main-navigation" class="main-nav" role="navigation" aria-label="Menú principal">
+            <button type="button" class="nav-close" aria-label="Cerrar menú">×</button>
 			<ul>
 				<li><a href="index.html">Inicio</a></li>
-				<li><a href="gatos.html">Gatos en adopción</a></li>
-				<li><a href="adopcion.html">Adoptar</a></li>
+
+				<li class="has-submenu">
+					<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Quiénes somos</button>
+					<ul class="submenu">
+						<li><a href="mision.html">Misión</a></li>
+						<li><a href="metodo-cer.html">Método CER (explicado claramente)</a></li>
+						<li><a href="team.html">Equipo</a></li>
+					</ul>
+				</li>
+
+				<li class="has-submenu">
+					<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Colonias</button>
+					<ul class="submenu">
+						<li><a href="coloniasfelinas.html">Qué son</a></li>
+						<li><a href="colonias-visitas.html">Cómo se gestionan</a></li>
+						<li><a href="colonias-gestiones.html">Normas de convivencia</a></li>
+					</ul>
+				</li>
+
+				<li class="has-submenu">
+					<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Colabora</button>
+					<ul class="submenu">
+						<li><a href="economiacircular.html">Economía circular</a></li>
+						<li><a href="socios.html">Hazte socio (formulario)</a></li>
+						<li><a href="voluntariado.html">Voluntariado</a></li>
+						<li><a href="donaciones.html">Donaciones</a></li>
+						<li><a href="merchandising.html">Tienda Solidaria</a></li>
+					</ul>
+				</li>
+
+				<li class="has-submenu">
+					<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Transparencia</button>
+					<ul class="submenu">
+						<li><a href="estatutos.html">Estatutos</a></li>
+						<li><a href="acta-fundacional.html">Acta fundacional</a></li>
+						<li><a href="memorias.html">Memorias / actividad</a></li>
+						<li><a href="uso-fondos.html">Uso de fondos</a></li>
+					</ul>
+				</li>
+
+				<li class="has-submenu">
+					<button class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Recursos</button>
+					<ul class="submenu">
+						<li><a href="guias.html">Guías básicas (alimentación responsable, convivencia)</a></li>
+						<li><a href="documentos.html">Documentos descargables</a></li>
+					</ul>
+				</li>
+
+				<li><a href="blog.html">Blog</a></li>
+				
 				<li><a href="contacto.html">Contacto</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
 
-<main>
+<main id="main-content">
 	<section class="hero" aria-labelledby="hero-title">
 		<div class="hero-media">
-			<img src="assets/Images/Hero/Amanecer en Minaya con gatos.png" alt="Paisaje con gatos" loading="lazy">
+			<img src="assets/Images/Sol y luna.jpg" alt="Paisaje con gatos" loading="lazy">
 		</div>
 		<div class="container hero-content">
 			<h2 id="hero-title">Adopta, no compres</h2>
